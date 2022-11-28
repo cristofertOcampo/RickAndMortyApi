@@ -1,0 +1,35 @@
+const options = { method: "GET" };
+const URL = "https://rickandmortyapi.com/api/character";
+
+fetch(URL, options)
+  .then((response) => response.json())
+  .then((data) => {
+    {
+      for (let i = 0; i < data.results.length; i++) {
+        createCard(data.results[i]);
+      }
+      console.log(data.results);
+    }
+  })
+  .catch((err) => console.error(`El error es: ${err}`));
+
+function createCard(Character) {
+  const { id, name, species, gender, image } = Character;
+  const main = document.getElementById("main");
+  const card = document.createElement("div");
+  const nameCharacter = document.createElement("h2");
+  const imageCharacter = document.createElement("img");
+  const informationCharacter = document.createElement("p");
+  const intermediateline = document.createElement("hr");
+
+  main.appendChild(card);
+  card.appendChild(imageCharacter);
+  card.appendChild(nameCharacter);
+  card.appendChild(informationCharacter);
+  card.appendChild(intermediateline);
+
+  nameCharacter.textContent = name;
+  informationCharacter.textContent =`${id} \n ${species} \n ${gender}` 
+  imageCharacter.src = image;
+  imageCharacter.alt = image;
+}
