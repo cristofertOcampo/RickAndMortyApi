@@ -35,8 +35,8 @@ function createCard(Character) {
   card.appendChild(informationCharacter);
   card.appendChild(intermediateline);
 
-  nameCharacter.textContent = name;
-  informationCharacter.textContent =`${id} \n ${species} \n ${gender}` 
+  nameCharacter.textContent = `${id} \n ${name}`;
+  informationCharacter.textContent =`${species} \n ${gender}` 
   imageCharacter.src = image;
   imageCharacter.alt = image; 
 }
