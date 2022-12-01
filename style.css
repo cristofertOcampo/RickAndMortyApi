@@ -4,11 +4,22 @@
     box-sizing: border-box;
 }
 
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+  width: 100%;
+}
+
+.imgRickAndMorty{
+  width: 100%;
+}
+
 .main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,380px);
+    gap: 90px;
     background: linear-gradient(90deg, #4ba9e9, #4ba9e9 50%, #fff 50%, #fff 100%);
 }
 
@@ -17,8 +28,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 600px;
-    height: 380px;
+    width: 420px;
+    height: 400px;
     background-color: #fff;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
     overflow: hidden;

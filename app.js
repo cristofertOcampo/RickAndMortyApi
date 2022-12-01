@@ -4,12 +4,10 @@ const URL = "https://rickandmortyapi.com/api/character";
 fetch(URL, options)
   .then((response) => response.json())
   .then((data) => {
-    {
       for (let i = 0; i < data.results.length; i++) {
         createCard(data.results[i]);
       }
       console.log(data.results);
-    }
   })
   .catch((err) => console.error(`${err}`));
 
