@@ -11,16 +11,23 @@ fetch(URL, options)
       console.log(data.results);
     }
   })
-  .catch((err) => console.error(`El error es: ${err}`));
+  .catch((err) => console.error(`${err}`));
 
 function createCard(Character) {
-  const { id, name, species, gender, image } = Character;
+  const {id, name, species, gender, image} = Character;
   const main = document.getElementById("main");
   const card = document.createElement("div");
   const nameCharacter = document.createElement("h2");
   const imageCharacter = document.createElement("img");
   const informationCharacter = document.createElement("p");
   const intermediateline = document.createElement("hr");
+
+  main.classList.add("main");
+  card.classList.add("card");
+  nameCharacter.classList.add("nameCharacter");
+  imageCharacter.classList.add("imageCharacter");
+  informationCharacter.classList.add("informationCharacter");
+
 
   main.appendChild(card);
   card.appendChild(imageCharacter);
@@ -31,5 +38,5 @@ function createCard(Character) {
   nameCharacter.textContent = name;
   informationCharacter.textContent =`${id} \n ${species} \n ${gender}` 
   imageCharacter.src = image;
-  imageCharacter.alt = image;
+  imageCharacter.alt = image; 
 }
