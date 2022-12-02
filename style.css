@@ -17,9 +17,13 @@
 }
 
 .main{
+  width: 100%;
+}
+
+.container{
     display: grid;
-    grid-template-columns: repeat(auto-fill,380px);
-    gap: 90px;
+    grid-template-columns: repeat(auto-fill, 270px);
+    gap: 150px;
     background: linear-gradient(90deg, #4ba9e9, #4ba9e9 50%, #fff 50%, #fff 100%);
 }
 
@@ -28,7 +32,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 420px;
+    width: 400px;
     height: 400px;
     background-color: #fff;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
